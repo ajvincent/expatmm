@@ -320,3 +320,11 @@ void
 ExpatXMLParser::CDataEnd(void) {
 
 }
+
+void
+ExpatXMLParser::getPosition(XML_Size & lineNumber, XML_Size & columnNumber) {
+    if (!expat_parser)
+        return;
+    lineNumber = XML_GetCurrentLineNumber(expat_parser);
+    columnNumber = XML_GetCurrentColumnNumber(expat_parser);
+}

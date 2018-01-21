@@ -131,6 +131,7 @@ namespace expatmm {
 	  virtual bool Ready(void) { return valid_parser; };
 	  virtual XML_Error getLastError(void) { return last_error; };
 	  virtual XML_Status getStatus(void) { return status; };
+	  virtual void getPosition(XML_Size & lineNumber, XML_Size & columnNumber);
   };
 };
 
